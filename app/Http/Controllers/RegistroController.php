@@ -56,25 +56,25 @@ class RegistroController extends Controller {
 
     return $dados;
   }
- 
+
   public function mostra($id) {
     $registros = Registro::find($id);
     return view('registros.formulario')
       ->with('r', $registros)
-      ->with('categorias', Categorias::all())
-      ->with('tipos_registro', TipoRegistro::all())
-      ->with('responsaveis', Responsavel::all())
-      ->with('contas', Conta::all())
-      ->with('status', Status::all());
+      ->with('categorias', Categorias::all()->pluck('nome','id'))
+      ->with('tipos_registro', TipoRegistro::all()->pluck('tipo_registro', 'id'))
+      ->with('responsaveis', Responsavel::all()->pluck('responsavel', 'id'))
+      ->with('contas', Conta::all()->pluck('conta', 'id'))
+      ->with('status', Status::all()->pluck('status', 'id'));
   }
 
   public function novo() {
     return view('registros.formulario')
-      ->with('categorias', Categorias::all())
-      ->with('tipos_registro', TipoRegistro::all())
-      ->with('responsaveis', Responsavel::all())
-      ->with('contas', Conta::all())
-      ->with('status', Status::all());
+    ->with('categorias', Categorias::all()->pluck('nome','id'))
+    ->with('tipos_registro', TipoRegistro::all()->pluck('tipo_registro', 'id'))
+    ->with('responsaveis', Responsavel::all()->pluck('responsavel', 'id'))
+    ->with('contas', Conta::all()->pluck('conta', 'id'))
+    ->with('status', Status::all()->pluck('status', 'id'));
   }
 
   public function adiciona(RegistroRequest $request) {
