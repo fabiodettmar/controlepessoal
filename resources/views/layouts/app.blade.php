@@ -84,7 +84,7 @@
 <script>
 $(document).ready(function() {
   $('.datedropper').dateDropper();
-  $('.moeda').maskMoney();
+  $('.moeda').maskMoney({prefix:'R$ ', thousands:'.',decimal:','});
   $('.select2').select2();
 });
 </script>
