@@ -88,8 +88,8 @@ class RegistroController extends Controller {
     return redirect()->action('RegistroController@getIndex');
   }
 
-  public function edita(RegistroRequest $request, $id) {
-    $this->validate($request, [
+  public function edita(RegistroRequest $request, Registro $registro) {
+/*    $this->validate($request, [
       'valor' => 'required',
       'id_tipo_registro' => 'required',
       'data_entrada' => 'required'
@@ -98,5 +98,25 @@ class RegistroController extends Controller {
     Registro::find($id)->update($request->all());
 
     return redirect()->action('RegistroController@getIndex');
+*/
+    $data = Input::all();
+
+    if ($registro->validate($data)) {
+
+        if ($registro->update($data)) {
+            return redirect()->action('RegistroController@getIndex')
+                ->with('sucesso', 'Registro editado com Sucesso!');
+        } else {
+            return redirect()->back()
+                ->withErrors($registro->errors())
+                ->withInput(Input::all());
+        }
+    } else {
+        return redirect()->back()
+            ->withErrors($registro->errors())
+            ->withInput(Input::all());
+    }
+
+
   }
 }

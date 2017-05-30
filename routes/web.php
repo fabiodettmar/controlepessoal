@@ -75,7 +75,7 @@ Route::get('registros/novo', 'RegistroController@novo');
 Route::post('registros/adiciona', 'RegistroController@adiciona');
 Route::get('registros/remove/{id}', 'RegistroController@remove');
 Route::get('registros/mostra/{id}', 'RegistroController@mostra');
-Route::post('registros/edita/{id}', 'RegistroController@edita');
+Route::put('registros/edita/{id}', 'RegistroController@edita');
 
 Route::get('/login', 'LoginController@form');
 Route::post('/login', 'LoginController@login');
