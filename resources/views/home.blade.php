@@ -18,9 +18,70 @@
                 </tbody>
             </table>
         </div>
+        <div class="col-md-6">
+          <div id="canvas-holder" style="width:100%">
+              <canvas id="chart-area" />
+          </div>
+        </div>
     </div>
 </div>
 @endsection
 @section('scripts.footer')
 <script src="{{URL::asset('dist/js/home.js')}}"></script>
+
+<script>
+    var randomScalingFactor = function() {
+        return Math.round(Math.random() * 100);
+    };
+
+    var config = {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                ],
+                backgroundColor: [
+                    window.chartColors.red,
+                    window.chartColors.orange,
+                    window.chartColors.yellow,
+                    window.chartColors.green,
+                    window.chartColors.blue,
+                ],
+                label: 'Dataset 1'
+            }],
+            labels: [
+                "Red",
+                "Orange",
+                "Yellow",
+                "Green",
+                "Blue"
+            ]
+        },
+        options: {
+            responsive: true,
+            legend: {
+                position: 'bottom',
+            },
+            title: {
+                display: true,
+                text: 'Despesas do mês'
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true
+            }
+        }
+    };
+
+    window.onload = function() {
+        var ctx = document.getElementById("chart-area").getContext("2d");
+        window.myDoughnut = new Chart(ctx, config);
+    };
+
+    </script>
 @endsection

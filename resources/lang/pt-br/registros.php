@@ -11,4 +11,5 @@ return [
     'conta' => 'Conta',
     'acoes' => 'Ações',
     'status' => 'Status',
+    'descricao' => 'Descrição',
 ];

@@ -30,6 +30,8 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+  <script src="{{URL::asset('dist/plugins/chartjs/Chart.js')}}"></script>
+  <script src="{{URL::asset('dist/plugins/chartjs/utils.js')}}"></script>
 </head>
 
 <body class="hold-transition skin-green sidebar-mini">
@@ -78,6 +80,7 @@
 <script src="{{URL::asset('dist/plugins/datatables/jquery.dataTables.js')}}"></script>
 <script src="{{URL::asset('dist/plugins/datatables/dataTables.bootstrap.js')}}"></script>
 <script src="{{URL::asset('dist/plugins/datedropper/datedropper.min.js')}}"></script>
+
 <!-- AdminLTE App -->
 <script src="{{URL::asset('dist/js/app.min.js')}}"></script>
 
