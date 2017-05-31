@@ -10,7 +10,7 @@
     <small>Optional description</small>
   </h1>
   <ol class="breadcrumb">
-    <li><a href="#"><i class="fa fa-dashboard"></i> Responsaveis</a></li>
+    <li><a href="#"><i class="fa fa-dashboard"></i> Responsáveis</a></li>
     <li class="active">lista</li>
   </ol>
 </section>
@@ -53,7 +53,7 @@
                       <tr>
                         <td>{{ $r->id }}</td>
                         <td>{{ $r->responsavel }}</td>
-                        <td style="background-color:{{ $r->cor }}">{{ $r->cor }}</td>
+                        <td style="background-color:#{{ $r->cor }}">{{ $r->cor }}</td>
                         <td>{{ $r->id_tipo_responsavel }}</td>
                         <td>
                             <a href="/responsaveis/mostra/{{ $r->id }}" class="btn btn-warning btn-xs">Editar</a>

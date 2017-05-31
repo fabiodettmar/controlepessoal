@@ -42,7 +42,7 @@
                 <thead>
                 <tr>
                     <th>@lang('tipos_registro.id')</th>
-                    <th>@lang('tipos_registro.conta')</th>
+                    <th>@lang('tipos_registro.tipo_registro')</th>
                     <th>@lang('tipos_registro.acoes')</th>
                 </tr>
                 </thead>
@@ -61,7 +61,7 @@
                 <tfoot>
                 <tr>
                   <th>@lang('tipos_registro.id')</th>
-                  <th>@lang('tipos_registro.conta')</th>
+                  <th>@lang('tipos_registro.tipo_registro')</th>
                   <th>@lang('tipos_registro.acoes')</th>
                 </tr>
                 </tfoot>

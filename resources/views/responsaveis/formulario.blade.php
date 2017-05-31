@@ -51,7 +51,7 @@
       <div class="col-md-2">
         <div class="form-group">
             <label>Cor</label>
-            <input type="text" name="cor" class="form-control" value="{{ old('cor')??$r->cor??'#FFFFFF' }}"/>
+            <input type="text" name="cor" class="form-control jscolor" value="{{ old('cor')??$r->cor??'#FFFFFF' }}"/>
         </div>
       </div>
       <div class="col-md-2">

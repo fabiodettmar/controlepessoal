@@ -42,7 +42,7 @@
                 <thead>
                 <tr>
                     <th>@lang('tipos_responsavel.id')</th>
-                    <th>@lang('tipos_responsavel.conta')</th>
+                    <th>@lang('tipos_responsavel.tipo_responsavel')</th>
                     <th>@lang('tipos_responsavel.acoes')</th>
                 </tr>
                 </thead>
@@ -61,7 +61,7 @@
                 <tfoot>
                 <tr>
                   <th>@lang('tipos_responsavel.id')</th>
-                  <th>@lang('tipos_responsavel.conta')</th>
+                  <th>@lang('tipos_responsavel.tipo_responsavel')</th>
                   <th>@lang('tipos_responsavel.acoes')</th>
                 </tr>
                 </tfoot>

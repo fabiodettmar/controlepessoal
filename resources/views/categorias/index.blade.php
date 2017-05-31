@@ -52,7 +52,7 @@
                       <tr>
                         <td>{{ $c->id }}</td>
                         <td>{{ $c->nome }}</td>
-                        <td style="background-color:{{ $c->cor }}">{{ $c->cor }}</td>
+                        <td style="background-color:#{{ $c->cor }}">{{ $c->cor }}</td>
                         <td>
                             <a href="/categorias/mostra/{{ $c->id }}" class="btn btn-warning btn-xs">Editar</a>
                             <a href="/categorias/remove/{{ $c->id }}" class="btn btn-danger btn-xs">Remover</a>
